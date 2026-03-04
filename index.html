@@ -422,6 +422,7 @@ box-shadow:0 25px 80px rgba(0,0,0,.6);
 }
 
 /* Floating Telegram button */
+/* Floating Telegram button */
 .floating-telegram{
   position: fixed;
   right: 18px;
@@ -430,9 +431,9 @@ box-shadow:0 25px 80px rgba(0,0,0,.6);
 
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
 
-  padding: 12px 14px;
+  padding: 12px 16px;
   border-radius: 999px;
 
   text-decoration: none;
@@ -443,6 +444,32 @@ box-shadow:0 25px 80px rgba(0,0,0,.6);
   background: linear-gradient(135deg, #fff7c2, #f7e39a, #d4af37, #ffeaa6);
 
   box-shadow: 0 18px 55px rgba(0,0,0,.55), 0 0 0 1px rgba(212,175,55,.15) inset;
+}
+
+.tg-icon{
+  font-size:18px;
+}
+
+.floating-telegram:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 24px 70px rgba(0,0,0,.65), 0 0 0 1px rgba(212,175,55,.22) inset;
+}
+
+/* Mobile version */
+@media (max-width:600px){
+
+.floating-telegram{
+  padding:12px;
+}
+
+.tg-text{
+  display:none;
+}
+
+.tg-icon{
+  font-size:20px;
+}
+
 }
 
 .floating-telegram:hover{
@@ -658,7 +685,8 @@ document.addEventListener("keydown", (e) => {
   <!-- Fullscreen image modal -->
 <!-- Floating Telegram button -->
 <a class="floating-telegram" href="https://t.me/newgold90" target="_blank" rel="noopener">
-  Telegram @newgold90
+  <span class="tg-icon">✈</span>
+  <span class="tg-text">Telegram @newgold90</span>
 </a>
 </body>
 
