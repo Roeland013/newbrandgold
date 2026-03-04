@@ -624,7 +624,28 @@ To book: contact us via Telegram (preferred).
   }
 
   renderGallery();
+
+   function openModal(src){
+  const m = document.getElementById("imgModal");
+  const img = document.getElementById("imgModalPhoto");
+  img.src = src;
+  m.classList.add("show");
+}
+
+function closeModal(){
+  const m = document.getElementById("imgModal");
+  m.classList.remove("show");
+  document.getElementById("imgModalPhoto").src = "";
+}
+
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") closeModal();
+}); 
 </script>
+  <!-- Fullscreen image modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img id="imgModalPhoto" src="" alt="Jewelry photo">
+</div>
 </body>
 
 </html>
