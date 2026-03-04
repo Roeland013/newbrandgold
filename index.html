@@ -615,12 +615,12 @@ To book: contact us via Telegram (preferred).
       return;
     }
 
-    grid.innerHTML = GALLERY_IMAGES.map((f, i) => `
-        <div class="tile ${f === "jewelry4.jpg" ? "contain" : ""}" onclick="openModal('${imgPath(f)}')">
-        <img src="${imgPath(f)}" alt="Gold jewelry" />
-        <div class="cap">${CAPTIONS[i] || "Private viewing in Rotterdam"}</div>
-      </div>
-    `).join("");
+   grid.innerHTML = GALLERY_IMAGES.map((f, i) => `
+  <div class="tile ${f === "jewelry4-optimized.jpg" ? "contain" : ""}" onclick="openModal('${imgPath(f)}')">
+    <img src="${imgPath(f)}" alt="Gold jewelry" />
+    <div class="cap">${CAPTIONS[i] || "Private viewing in Rotterdam"}</div>
+  </div>
+`).join("");
   }
 
   renderGallery();
