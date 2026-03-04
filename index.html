@@ -412,6 +412,30 @@ border:1px solid rgba(255,255,255,.15);
 .hero-caption{
   box-shadow: 0 10px 30px rgba(0,0,0,.45);
 }
+    .modal{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,.85);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.modal img{
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+box-shadow:0 25px 80px rgba(0,0,0,.6);
+}
+
+.modal.show{
+display:flex;
+}
+    
 </style>
 </head>
 
